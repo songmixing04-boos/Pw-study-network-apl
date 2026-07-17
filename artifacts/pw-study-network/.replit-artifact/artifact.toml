@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "PW Study Network"
+version = "1.0.0"
+id = "artifacts/pw-study-network"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20030
+
+[services.development]
+run = "pnpm --filter @workspace/pw-study-network run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pw-study-network", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/pw-study-network/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20030"
+BASE_PATH = "/"
