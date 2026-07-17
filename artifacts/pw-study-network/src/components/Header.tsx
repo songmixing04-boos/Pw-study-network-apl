@@ -1,6 +1,7 @@
 import React from 'react';
 import logoUrl from '@assets/file_00000000a3cc71fbb352504f800fc8d2_1784246786895.png';
 import { Menu } from 'lucide-react';
+import { SessionTimer } from '@/components/SessionTimer';
 
 export function Header() {
   return (
@@ -24,7 +25,8 @@ export function Header() {
           </div>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
+          <SessionTimer />
           <a href="#directory" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Directory</a>
           <a href="#premium" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Premium</a>
           <a href="#community" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Community</a>

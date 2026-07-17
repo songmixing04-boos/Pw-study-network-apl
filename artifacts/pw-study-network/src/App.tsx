@@ -5,6 +5,7 @@ import { SiteList } from '@/components/SiteList';
 import { PremiumBanner } from '@/components/PremiumBanner';
 import { Footer } from '@/components/Footer';
 import { WelcomeModal } from '@/components/WelcomeModal';
+import { AIAssistant } from '@/components/AIAssistant';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </main>
       <Footer />
       <WelcomeModal />
+      <AIAssistant />
     </div>
   );
 }
