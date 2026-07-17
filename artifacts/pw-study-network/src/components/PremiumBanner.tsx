@@ -62,9 +62,14 @@ export function PremiumBanner() {
                   <span className="text-4xl font-heading font-bold text-primary">₹149</span>
                   <span className="text-muted-foreground">/month</span>
                 </div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(212,160,23,0.4)] hover:shadow-[0_0_30px_rgba(212,160,23,0.6)] transform hover:-translate-y-1">
+                <a
+                  href="https://t.me/Chaudharybabu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 px-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(212,160,23,0.4)] hover:shadow-[0_0_30px_rgba(212,160,23,0.6)] transform hover:-translate-y-1 text-center"
+                >
                   Claim VIP Status
-                </button>
+                </a>
                 <p className="text-xs text-muted-foreground mt-4">Secure payment via UPI/Cards</p>
               </div>
             </div>
