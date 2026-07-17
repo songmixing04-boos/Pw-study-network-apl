@@ -1,9 +1,11 @@
 import React from 'react';
 import logoUrl from '@assets/file_00000000a3cc71fbb352504f800fc8d2_1784246786895.png';
-import { Menu } from 'lucide-react';
+import { Menu, Sparkles } from 'lucide-react';
 import { SessionTimer } from '@/components/SessionTimer';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
+  const navigate = useNavigate();
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-lg border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
@@ -30,6 +32,13 @@ export function Header() {
           <a href="#directory" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Directory</a>
           <a href="#premium" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Premium</a>
           <a href="#community" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Community</a>
+          <button
+            onClick={() => navigate('/ai')}
+            className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+          >
+            <Sparkles size={14} />
+            AI Assistant
+          </button>
           <button className="px-5 py-2 text-sm font-semibold rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all shadow-[0_0_10px_rgba(212,160,23,0.1)]">
             Join Club
           </button>
