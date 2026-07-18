@@ -25,6 +25,8 @@ export interface Site {
   logo: string;
   brand: string;
   platformGroup: PlatformGroup;
+  powerful?: boolean;        // 🔥 "Most Powerful" ribbon
+  availableFrom?: string;    // e.g. "1 August 2026" — coming soon label
 }
 
 export interface PlatformMeta {
@@ -80,6 +82,13 @@ export const SITES: Site[] = [
   { name: 'PW ModGalaxy',                     url: 'https://pw.modgalaxy.in/',                                         category: 'LOGIN',     status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
   { name: 'PrimeStudy (PW Auth)',              url: 'https://pw.primestudy.site/auth',                                  category: 'LOGIN',     status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
   { name: 'StudyBee PW (Auth)',               url: 'https://pw.studybeepro.in/auth',                                   category: 'LOGIN',     status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
+  { name: 'VidCloud',                         url: 'https://vidcloud.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
+  { name: 'StudyRatna',                        url: 'https://studyratna.cc/',                                           category: 'DIRECT',    status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
+  { name: 'StudyRays',                         url: 'https://studyrays.cc/',                                            category: 'DIRECT',    status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW', powerful: true },
+  { name: 'VedStudy',                          url: 'https://vedstudy.com/',                                            category: 'DIRECT',    status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
+  { name: 'RareStudy',                         url: 'https://rarestudy.in/',                                            category: 'DIRECT',    status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
+  { name: 'ASMultiverse',                     url: 'https://asmultiverse.com/',                                        category: 'DIRECT',    status: 'Active',   logo: LOGOS.pw,          brand: `PW ${BY}`,            platformGroup: 'PW' },
+  { name: 'PW Study Network (Official)',       url: 'https://pw-study-network-by-ankit.vercel.app/',                   category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,     brand: `PW ${BY}`,            platformGroup: 'PW', powerful: true, availableFrom: '1 August 2026' },
 
   // ── RWA ─────────────────────────────────────────────────────────────────
   { name: 'DeltaStudy (Rojgar With Ankit)',    url: 'https://deltastudy.site/rojgarwithankit',                          category: 'DIRECT',    status: 'Active',   logo: LOGOS.rwa,         brand: `RWA ${BY}`,           platformGroup: 'RWA' },
@@ -120,16 +129,10 @@ export const SITES: Site[] = [
   { name: 'DeltaStudy (Sway)',                 url: 'https://deltastudy.site/sway',                                     category: 'DIRECT',    status: 'Active',   logo: LOGOS.sway,        brand: `Sway ${BY}`,          platformGroup: 'SWAY' },
 
   // ── OTHERS ──────────────────────────────────────────────────────────────
-  { name: 'VidCloud',                         url: 'https://vidcloud.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,               brand: `VidCloud ${BY}`,      platformGroup: 'OTHERS' },
-  { name: 'StudyRatna',                        url: 'https://studyratna.cc/',                                           category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `StudyRatna ${BY}`,    platformGroup: 'OTHERS' },
-  { name: 'StudyRays',                         url: 'https://studyrays.cc/',                                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `StudyRays ${BY}`,     platformGroup: 'OTHERS' },
-  { name: 'VedStudy',                          url: 'https://vedstudy.com/',                                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `VedStudy ${BY}`,      platformGroup: 'OTHERS' },
-  { name: 'RareStudy',                         url: 'https://rarestudy.in/',                                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `RareStudy ${BY}`,     platformGroup: 'OTHERS' },
   { name: 'TestFile',                          url: 'https://testfile.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `TestFile ${BY}`,      platformGroup: 'OTHERS' },
   { name: 'VidyaKool',                         url: 'https://vidyakool.streamfiles.eu.org/',                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `VidyaKool ${BY}`,     platformGroup: 'OTHERS' },
   { name: 'PiPro DeltaStudy',                 url: 'https://pipro.deltastudy.site/',                                   category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
   { name: 'StudyBee (SelectionBee)',           url: 'https://studybeepro.in/selectionbee/',                             category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `SelectionBee ${BY}`,  platformGroup: 'OTHERS' },
-  { name: 'ASMultiverse',                     url: 'https://asmultiverse.com/',                                        category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `ASMultiverse ${BY}`,  platformGroup: 'OTHERS' },
   { name: 'S3 CDN SamfyGros',                 url: 'https://s3-cdn.samfygros.com/',                                    category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `SamfyGros ${BY}`,     platformGroup: 'OTHERS' },
   { name: 'S4 CDN SamfyGros',                 url: 'https://s4-cdn.samfygros.com/',                                    category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `SamfyGros ${BY}`,     platformGroup: 'OTHERS' },
   { name: 'DeltaStudy (Verify)',               url: 'https://deltastudy.site/verify?next=%2Fstudy-v2%2Fbatches',       category: 'KEY-BASED', status: 'Active',   logo: pwNetworkLogo,                brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
