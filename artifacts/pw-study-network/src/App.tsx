@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer';
 import { WelcomeModal } from '@/components/WelcomeModal';
 import { AIAssistant } from '@/components/AIAssistant';
 import { AIPage } from '@/components/AIPage';
+import { FreeAlert } from '@/components/FreeAlert';
 
 function HomePage() {
   return (
@@ -20,6 +21,7 @@ function HomePage() {
       </main>
       <Footer />
       <WelcomeModal />
+      <FreeAlert />
       <AIAssistant />
     </div>
   );
