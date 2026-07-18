@@ -1,3 +1,6 @@
+// @ts-ignore — Vite handles image imports
+import pwNetworkLogo from '@assets/file_0000000069e471fdaef8c809135c7464_1784356090795.png';
+
 export type SiteCategory = 'DIRECT' | 'KEY-BASED' | 'LOGIN';
 
 export type PlatformGroup =
@@ -60,10 +63,10 @@ export const PLATFORM_META: Record<PlatformGroup, PlatformMeta> = {
   MISSIONJEET: { label: 'Mission Jeet',        sublabel: 'Mission Jeet by Ankit Chaudhary',logo: LOGOS.missionjeet, color: '#f5a623' },
   PADHLE:      { label: 'Padhle',              sublabel: 'Padhle by Ankit Chaudhary',      logo: LOGOS.padhle,      color: '#f5c518' },
   MASTERSAHAB: { label: 'MasterSahab',         sublabel: 'MasterSahab by Ankit Chaudhary', logo: LOGOS.mastersahab, color: '#1a6fbf' },
-  MUNIL:       { label: 'MunilSir',            sublabel: 'MunilSir by Ankit Chaudhary',    logo: LOGOS.munil,       color: '#9b59b6' },
-  SCIENCEFUN:  { label: 'ScienceAndFun',       sublabel: 'ScienceAndFun by Ankit Chaudhary',logo: LOGOS.sciencefun, color: '#27ae60' },
-  SWAY:        { label: 'Sway',                sublabel: 'Sway by Ankit Chaudhary',        logo: LOGOS.sway,        color: '#0078d4' },
-  OTHERS:      { label: 'Other Platforms',     sublabel: 'by Ankit Chaudhary',             logo: gf('studyratna.cc'),color: '#D4A017' },
+  MUNIL:       { label: 'MunilSir',            sublabel: 'MunilSir by Ankit Chaudhary',    logo: pwNetworkLogo,     color: '#9b59b6' },
+  SCIENCEFUN:  { label: 'ScienceAndFun',       sublabel: 'ScienceAndFun by Ankit Chaudhary',logo: pwNetworkLogo,   color: '#27ae60' },
+  SWAY:        { label: 'Sway',                sublabel: 'Sway by Ankit Chaudhary',        logo: pwNetworkLogo,     color: '#0078d4' },
+  OTHERS:      { label: 'Other Platforms',     sublabel: 'by Ankit Chaudhary',             logo: pwNetworkLogo,      color: '#D4A017' },
 };
 
 export const PLATFORM_ORDER: PlatformGroup[] = [
@@ -117,21 +120,21 @@ export const SITES: Site[] = [
   { name: 'DeltaStudy (Sway)',                 url: 'https://deltastudy.site/sway',                                     category: 'DIRECT',    status: 'Active',   logo: LOGOS.sway,        brand: `Sway ${BY}`,          platformGroup: 'SWAY' },
 
   // ── OTHERS ──────────────────────────────────────────────────────────────
-  { name: 'VidCloud',                         url: 'https://vidcloud.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: gf('vidcloud.eu.org'),       brand: `VidCloud ${BY}`,      platformGroup: 'OTHERS' },
-  { name: 'StudyRatna',                        url: 'https://studyratna.cc/',                                           category: 'DIRECT',    status: 'Active',   logo: gf('studyratna.cc'),          brand: `StudyRatna ${BY}`,    platformGroup: 'OTHERS' },
-  { name: 'StudyRays',                         url: 'https://studyrays.cc/',                                            category: 'DIRECT',    status: 'Active',   logo: gf('studyrays.cc'),           brand: `StudyRays ${BY}`,     platformGroup: 'OTHERS' },
-  { name: 'VedStudy',                          url: 'https://vedstudy.com/',                                            category: 'DIRECT',    status: 'Active',   logo: gf('vedstudy.com'),           brand: `VedStudy ${BY}`,      platformGroup: 'OTHERS' },
-  { name: 'RareStudy',                         url: 'https://rarestudy.in/',                                            category: 'DIRECT',    status: 'Active',   logo: gf('rarestudy.in'),           brand: `RareStudy ${BY}`,     platformGroup: 'OTHERS' },
-  { name: 'TestFile',                          url: 'https://testfile.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: gf('testfile.eu.org'),        brand: `TestFile ${BY}`,      platformGroup: 'OTHERS' },
-  { name: 'VidyaKool',                         url: 'https://vidyakool.streamfiles.eu.org/',                            category: 'DIRECT',    status: 'Active',   logo: gf('streamfiles.eu.org'),     brand: `VidyaKool ${BY}`,     platformGroup: 'OTHERS' },
-  { name: 'PiPro DeltaStudy',                 url: 'https://pipro.deltastudy.site/',                                   category: 'DIRECT',    status: 'Active',   logo: gf('deltastudy.site'),        brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
-  { name: 'StudyBee (SelectionBee)',           url: 'https://studybeepro.in/selectionbee/',                             category: 'DIRECT',    status: 'Active',   logo: gf('studybeepro.in'),         brand: `SelectionBee ${BY}`,  platformGroup: 'OTHERS' },
-  { name: 'ASMultiverse',                     url: 'https://asmultiverse.com/',                                        category: 'DIRECT',    status: 'Active',   logo: gf('asmultiverse.com'),       brand: `ASMultiverse ${BY}`,  platformGroup: 'OTHERS' },
-  { name: 'S3 CDN SamfyGros',                 url: 'https://s3-cdn.samfygros.com/',                                    category: 'DIRECT',    status: 'Active',   logo: gf('samfygros.com'),          brand: `SamfyGros ${BY}`,     platformGroup: 'OTHERS' },
-  { name: 'S4 CDN SamfyGros',                 url: 'https://s4-cdn.samfygros.com/',                                    category: 'DIRECT',    status: 'Active',   logo: gf('samfygros.com'),          brand: `SamfyGros ${BY}`,     platformGroup: 'OTHERS' },
-  { name: 'DeltaStudy (Verify)',               url: 'https://deltastudy.site/verify?next=%2Fstudy-v2%2Fbatches',       category: 'KEY-BASED', status: 'Active',   logo: gf('deltastudy.site'),        brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
-  { name: 'DeltaStudy (Batches)',              url: 'https://deltastudy.site/study-v2/batches',                        category: 'KEY-BASED', status: 'Active',   logo: gf('deltastudy.site'),        brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
-  { name: 'PrimeStudy (Main)',                 url: 'https://primestudy.site/',                                         category: 'LOGIN',     status: 'Active',   logo: gf('primestudy.site'),        brand: `PrimeStudy ${BY}`,    platformGroup: 'OTHERS' },
-  { name: 'StudyBee Pro (Main)',              url: 'https://studybeepro.in/',                                          category: 'LOGIN',     status: 'Active',   logo: gf('studybeepro.in'),         brand: `StudyBee ${BY}`,      platformGroup: 'OTHERS' },
-  { name: 'DeltaStudy (Main)',                 url: 'https://deltastudy.site/',                                         category: 'LOGIN',     status: 'Active',   logo: gf('deltastudy.site'),        brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
+  { name: 'VidCloud',                         url: 'https://vidcloud.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,               brand: `VidCloud ${BY}`,      platformGroup: 'OTHERS' },
+  { name: 'StudyRatna',                        url: 'https://studyratna.cc/',                                           category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `StudyRatna ${BY}`,    platformGroup: 'OTHERS' },
+  { name: 'StudyRays',                         url: 'https://studyrays.cc/',                                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `StudyRays ${BY}`,     platformGroup: 'OTHERS' },
+  { name: 'VedStudy',                          url: 'https://vedstudy.com/',                                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `VedStudy ${BY}`,      platformGroup: 'OTHERS' },
+  { name: 'RareStudy',                         url: 'https://rarestudy.in/',                                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `RareStudy ${BY}`,     platformGroup: 'OTHERS' },
+  { name: 'TestFile',                          url: 'https://testfile.eu.org/',                                         category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `TestFile ${BY}`,      platformGroup: 'OTHERS' },
+  { name: 'VidyaKool',                         url: 'https://vidyakool.streamfiles.eu.org/',                            category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `VidyaKool ${BY}`,     platformGroup: 'OTHERS' },
+  { name: 'PiPro DeltaStudy',                 url: 'https://pipro.deltastudy.site/',                                   category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
+  { name: 'StudyBee (SelectionBee)',           url: 'https://studybeepro.in/selectionbee/',                             category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `SelectionBee ${BY}`,  platformGroup: 'OTHERS' },
+  { name: 'ASMultiverse',                     url: 'https://asmultiverse.com/',                                        category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `ASMultiverse ${BY}`,  platformGroup: 'OTHERS' },
+  { name: 'S3 CDN SamfyGros',                 url: 'https://s3-cdn.samfygros.com/',                                    category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `SamfyGros ${BY}`,     platformGroup: 'OTHERS' },
+  { name: 'S4 CDN SamfyGros',                 url: 'https://s4-cdn.samfygros.com/',                                    category: 'DIRECT',    status: 'Active',   logo: pwNetworkLogo,                brand: `SamfyGros ${BY}`,     platformGroup: 'OTHERS' },
+  { name: 'DeltaStudy (Verify)',               url: 'https://deltastudy.site/verify?next=%2Fstudy-v2%2Fbatches',       category: 'KEY-BASED', status: 'Active',   logo: pwNetworkLogo,                brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
+  { name: 'DeltaStudy (Batches)',              url: 'https://deltastudy.site/study-v2/batches',                        category: 'KEY-BASED', status: 'Active',   logo: pwNetworkLogo,                brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
+  { name: 'PrimeStudy (Main)',                 url: 'https://primestudy.site/',                                         category: 'LOGIN',     status: 'Active',   logo: pwNetworkLogo,                brand: `PrimeStudy ${BY}`,    platformGroup: 'OTHERS' },
+  { name: 'StudyBee Pro (Main)',              url: 'https://studybeepro.in/',                                          category: 'LOGIN',     status: 'Active',   logo: pwNetworkLogo,                brand: `StudyBee ${BY}`,      platformGroup: 'OTHERS' },
+  { name: 'DeltaStudy (Main)',                 url: 'https://deltastudy.site/',                                         category: 'LOGIN',     status: 'Active',   logo: pwNetworkLogo,                brand: `DeltaStudy ${BY}`,    platformGroup: 'OTHERS' },
 ];
